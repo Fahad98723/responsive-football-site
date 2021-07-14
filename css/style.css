@@ -17,13 +17,36 @@ header{
     flex-direction: column;
     align-items: center;
 }
-
+/* ball */
+.ball img{
+    height: 100x;
+    width: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: ball 3s ease-in-out infinite alternate;
+    display: none;
+}
+@keyframes ball {
+    0%{
+        top: 0px;
+    }
+    50%{
+        top: 585px;
+        left: 570px;
+    }
+    100%{
+        top: 0px;
+        left: 1140px;
+    }
+}
 .navigation{
     display: flex;
     width: 1160px;
     justify-content: space-between;
     margin: 40px 0px;
     height: 44px;
+    align-items: center;
 }
 nav ul{
     display: flex;
@@ -60,6 +83,9 @@ li{
 /*--------
  header hover
  ---------- */
+ header:hover .ball img{
+     display: block;
+ }
 header:hover .banner-heading img{
     transform: rotate(15deg);
 }
@@ -259,6 +285,32 @@ footer p{
  mobile responsive
 ---------- */
 @media only screen and (max-width:688px) {
+    /*-----
+     ball 
+    -------*/
+    /* ball */
+.ball img{
+    height: 100x;
+    width: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: ball 3s ease-in-out infinite alternate;
+    display: none;
+}
+@keyframes ball {
+    0%{
+        top: 0px;
+    }
+    50%{
+        top: 500px;
+        left: 50%;
+    }
+    100%{
+        top: 0px;
+        left: 100%;
+    }
+}
     header{
         height: 600px;
     }
