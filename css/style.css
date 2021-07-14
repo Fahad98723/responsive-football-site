@@ -25,6 +25,7 @@ header{
 }
 nav ul{
     display: flex;
+    width: 100%;
 }
 li{
     list-style: none;
@@ -36,6 +37,10 @@ li{
     color: white;
     margin-left: 0px;
 }
+.navigation .menu a:hover{
+    border-top:2px solid #E02C6D ;
+    border-bottom:2px solid #E02C6D ;
+}
 .home{
     display: flex;
     justify-content: center;
@@ -45,7 +50,6 @@ li{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     width: 100%;
-    overflow: hidden;
 }
 .banner-heading .image img{
     width: 100%;
@@ -60,12 +64,20 @@ header:hover .banner-heading img{
     font-size: 64px;
     color: white;
 }
+/* ------------
+    button
+ --------------*/
 .btn{
     font-size: 16px;
     color: white;
     text-decoration: none;
     background: #E02C6D;
     padding: 10px 24px;
+    transition: 1s;
+}
+.btn:hover{
+    background: white;
+    color: #E02C6D;
 }
 .heading .btn i{
     margin-left: 8px;
@@ -163,19 +175,34 @@ footer p{
 /* media query */
 /* mobile responsive */
 @media only screen and (max-width:688px) {
-    .navigation{
-        width: 100%;
-        align-items: center;
-    }
     header{
-        height: 695px;
+        height: 600px;
     }
+    .navigation{
+        display: none;
+        
+        /* width: 100%;
+        flex-direction: column;
+        margin-bottom: 90px;
+        margin-top: 0px; */
+    }
+    /* .navigation a{
+        margin-right:26px;
+        font-size: 16px;
+    } */
     .home,  .container{
         width: 90%;
+    }
+    .container{
+        padding-top: 30px;
+        padding-bottom: 0px;
     }
     .banner-heading, .players, .highlights{
         grid-template-columns: repeat(1,1fr);
     }
+    /* 
+    home section
+    */
     .banner-heading .heading{
         width: 100%;
     }
@@ -184,20 +211,32 @@ footer p{
     }
     .banner-heading .image{
         margin-top: 50px;
-        margin-bottom: 60px;
     }
     .banner-heading .image img{
         width: 330px;
         height: 260px;
     }
+    /*
+     highlight section 
+    */
     .highlight-image img{
         width: 100%;
         /* width: 567px; */
         height: 250px;
-        margin-top: 20px;
+        margin:40px 0px;
     }
+    .highlight-heading h1{
+        font-size: 30px;
+    }
+    .highlight-heading p{
+        margin-bottom: 30px;
+    }
+    /*
+     football section
+    */
     .football-logo img{
         width: 300px;
         height: 110px;
+        margin-bottom: 20px;
     }
 }
