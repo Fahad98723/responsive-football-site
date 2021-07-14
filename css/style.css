@@ -306,11 +306,11 @@ footer p{
         top: 0px;
     }
     50%{
-        left: 37%;
+        left: 36%;
         top:510px
     }
     100%{
-        left: 75%;
+        left: 72%;
     }
 }
 
@@ -357,7 +357,7 @@ home section
         margin-top: 50px;
     }
     .banner-heading .image img{
-        width: 330px;
+        width: 320px;
         height: 260px;
     }
 /*-------
