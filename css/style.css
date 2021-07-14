@@ -18,6 +18,7 @@ header{
     align-items: center;
 }
 /* ball */
+
 .ball img{
     height: 100x;
     width: 100px;
@@ -286,10 +287,11 @@ footer p{
  mobile responsive
 ---------- */
 @media only screen and (max-width:688px) {
-    /*-----
-     ball 
-    -------*/
-    /* ball */
+/*-----
+    ball animation
+-------*/
+
+ /* ball */
 .ball img{
     height: 100x;
     width: 100px;
@@ -304,13 +306,18 @@ footer p{
         top: 0px;
     }
     50%{
-        left: 40%;
+        left: 42%;
         top:510px
     }
     100%{
-        left: 80%;
+        left: 85%;
     }
 }
+
+/*-------
+ header navigation and container
+ ---------- */
+
     header{
         height: 600px;
         width: 100%;
@@ -337,9 +344,9 @@ footer p{
     .banner-heading, .players, .highlights, .goals-assists, .youtube-contact{
         grid-template-columns: repeat(1,1fr);
     }
-    /* ---------
-    home section
-    -------------*/
+/* ---------
+home section
+-------------*/
     .banner-heading .heading{
         width: 100%;
     }
@@ -353,9 +360,9 @@ footer p{
         width: 330px;
         height: 260px;
     }
-    /*-------
-     highlight section 
-    ---------*/
+/*-------
+ highlight section 
+---------*/
     .highlight-image img{
         width: 100%;
         /* width: 567px; */
@@ -368,9 +375,9 @@ footer p{
     .highlight-heading p{
         margin-bottom: 30px;
     }
-    /*------
-     goals aand assists
-     ------- */
+/*------
+ goals aand assists
+ ------- */
     th{
         font-size: 25px;
         color: white;
@@ -385,9 +392,9 @@ footer p{
     .goals-assists h1{
         margin-bottom: 0px;
     }
-    /*--------
-     youtube and contact
-    ---------
+/*--------
+ youtube and contact
+---------
      */
      .youtube-contact h1{
          font-size: 30px;
@@ -395,9 +402,9 @@ footer p{
      .youtube-contact label, input, textarea{
          font-size: 22px;
      } 
-    /*-------
-     football section
-    ---------*/
+/*-------
+ football section
+---------*/
     .football-logo img{
         width: 300px;
         height: 110px;
@@ -408,3 +415,66 @@ footer p{
 /*--------
  tablet responsive
 --------- */
+@media only screen and (min-width:688px) and (max-width:1080px) {
+/* -----
+ball animation 
+---------*/
+    @keyframes ball {
+        0%{
+            top: 0px;
+        }
+        50%{
+            left: 43%;
+            top:410px
+        }
+        100%{
+            left: 88%;
+        }
+    }
+    .banner-heading, .players{
+        grid-template-columns: repeat(2,1fr);
+    }
+/* -----------
+home and container
+---------- */
+
+    .home,  .container{
+        width: 90%;
+    }
+
+/* --------
+navigation 
+-----------*/
+    .navigation{    
+        width: 100%;
+        margin-bottom: 90px;
+    }
+    .navigation a{
+        margin-right:20px;
+        font-size: 16px;
+    }
+/*-------
+ banner section
+----------- */
+    .banner-heading .heading h1{
+        font-size: 45px;
+    }
+    .banner-heading .image{
+        margin-top: 30px;
+    }
+    .banner-heading .image img{
+        width: 100%;
+    }
+/*-------
+ highlight section 
+---------*/
+    .highlight-image img{
+        width: 100%;
+        /* width: 567px; */
+        height: auto;
+        margin:40px 0px;
+    }
+    .highlight-heading h1{
+        font-size: 35px;
+    }
+}
